@@ -67,7 +67,7 @@ jobs:
       - name: Build Docker image for Trivy 
         run: docker build -t democyber:latest .
       - name: Scan Docker image with Trivy
-        uses: aquasecurity/trivy-action@v0.33.1
+        uses: aquasecurity/trivy-action@v0.20.0
         with:
           image-ref: democyber:latest
           format: 'table'
