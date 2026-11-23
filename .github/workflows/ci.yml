@@ -31,3 +31,11 @@ jobs:
 
       - name: Build Docker image
         run: docker build -t yassb24/democyber:latest .
+
+# Upload the Gitleaks report
+      - name: Upload Gitleaks report
+        uses: actions/upload-artifact@v4
+        with:
+          name: gitleaks-report
+          path: results.sarif
+          
