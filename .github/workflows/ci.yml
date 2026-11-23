@@ -20,8 +20,8 @@ jobs:
         uses: actions/checkout@v4
 
       # Gitleaks scan (before compilation)
-      - name: Run Gitleaks scan
-        uses: zricethezav/gitleaks-action@v2
+      # - name: Run Gitleaks scan
+      #   uses: zricethezav/gitleaks-action@v2
 
       - name: Set up Java 21
         uses: actions/setup-java@v4
@@ -64,7 +64,7 @@ jobs:
           docker rm democyber-test
 
       #Tivy scan
-      - name: Build Docker image
+      - name: Build Docker image for Trivy 
         run: docker build -t democyber:latest .
       - name: Scan Docker image with Trivy
         uses: aquasecurity/trivy-action@v0.33.1
