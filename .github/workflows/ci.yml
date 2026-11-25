@@ -89,6 +89,8 @@ jobs:
         run: docker push $DOCKER_IMAGE_NAME
 
 # Run SonarCloud scan
+# Run SonarCloud scan
+
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
         env:
